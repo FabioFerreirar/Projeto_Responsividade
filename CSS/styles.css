@@ -1,4 +1,3 @@
-
 /* Gerais */
 * {
     margin: 0;
@@ -7,14 +6,14 @@
     box-sizing: border-box;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
     color: #333;
 }
 
-p { 
-    color: #70747a ;
+p {
+    color: #70747a;
 }
 
 /* Navbar */
@@ -27,7 +26,8 @@ p {
 }
 
 nav {
-    position:relative;  /* torna nav como referencia para seus filhos */
+    position: relative;
+    /* torna nav como referencia para seus filhos */
 }
 
 .logo {
@@ -37,7 +37,8 @@ nav {
 
 .navbar-items {
 
-    position: absolute; /* o elemento filho se posicionará em relação ao seu parente mais próximo */
+    position: absolute;
+    /* o elemento filho se posicionará em relação ao seu parente mais próximo */
     right: 0;
     height: 80px;
     line-height: 80px;
@@ -52,7 +53,7 @@ nav {
 }
 
 .navbar-items a {
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     transition: 0.5s;
 }
@@ -63,14 +64,15 @@ nav {
 
 .default-btn {
     padding: 15px 20px;
-    background-color:#2cc76a ;
+    background-color: #2cc76a;
     border-radius: 5px;
 }
 
 .navbar-items .default-btn:hover {
-    background-color:#12582e;
+    background-color: #12582e;
     color: #fff;
 }
+
 .main-banner {
     background-image: url(../img/mainbanner.png);
     background-size: cover;
@@ -80,7 +82,7 @@ nav {
 
 .main-banner h1,
 .main-banner p {
-    color:#fff;
+    color: #fff;
     text-align: center;
     font-weight: bold;
     text-shadow: #000 3px 2px 3px;
@@ -92,13 +94,13 @@ nav {
 }
 
 .main-banner p {
-    font-size: 32px;   
+    font-size: 32px;
 }
 
 /* services */
 
 .service-container {
-    padding: 5rem 0;   
+    padding: 5rem 0;
 }
 
 .service-container ul {
@@ -108,14 +110,17 @@ nav {
 }
 
 .service-container li {
-     flex: 1 1 200px; /* comportamento ao aumentar ou diminuir a página */
-     list-style: none;
-     text-align: center;
-     padding: 20px;
+    flex: 1 1 200px;
+    /* comportamento ao aumentar ou diminuir a página */
+    list-style: none;
+    text-align: center;
+    padding: 20px;
 }
 
- .fas { /*fas são todos  os icones */
-     font-size: 60px; /*fonte awsome considera os ícones como texto, motivo do atributo de texto servir para imagem */
+.fas {
+    /*fas são todos  os icones */
+    font-size: 60px;
+    /*fonte awsome considera os ícones como texto, motivo do atributo de texto servir para imagem */
     margin-bottom: 15px;
 }
 
@@ -132,10 +137,62 @@ nav {
 }
 
 .service-container h3 {
-margin-bottom: 25px;
-    
+    margin-bottom: 25px;
+
 }
 
 .service-container p {
     line-height: 24px;
+}
+
+/* prices and plans */
+
+.pricing-container {
+    padding-bottom: 5rem;
+    text-align: center;
+}
+
+.pricing-container h2 {
+    font-size: 36px;
+}
+
+.pricing-container p {
+    font-size: 20px;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 50px auto 0;
+}
+
+.plan {
+    flex: 1;
+    /*abreviação de flex-grow,
+     flex-shrink e flex-basis - nesse caso: flex:1=flex-grow: 1 no qual os 
+     ícones crescerão em proporções iguais nos espaços da tela; */
+     max-width: 275px;
+     margin: 0 20px;
+}
+
+.plan li {
+    list-style: none;
+    height: 50px;
+    line-height: 50px;
+    background-color: #e8e9ea;
+    color: #333;
+}
+
+.plan .price {
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    background-color: #2cc762;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto -40px;
+    font-size: 18px;
+    position: relative; /* fica na frente das posições estáticas */
 }
