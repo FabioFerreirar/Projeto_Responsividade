@@ -172,8 +172,8 @@ nav {
     /*abreviação de flex-grow,
      flex-shrink e flex-basis - nesse caso: flex:1=flex-grow: 1 no qual os 
      ícones crescerão em proporções iguais nos espaços da tela; */
-     max-width: 275px;
-     margin: 0 20px;
+    max-width: 275px;
+    margin: 0 20px;
 }
 
 .plan li {
@@ -194,7 +194,8 @@ nav {
     text-align: center;
     margin: 0 auto -40px;
     font-size: 18px;
-    position: relative; /* fica na frente das posições estáticas */
+    position: relative;
+    /* fica na frente das posições estáticas */
 }
 
 .plan .plan-name {
@@ -202,7 +203,7 @@ nav {
     font-size: 20px;
     font-weight: bold;
     color: #fff;
-    background-color:#202b34 ;
+    background-color: #202b34;
     padding: 50px 0;
     line-height: 20px;
 }
@@ -217,7 +218,7 @@ nav {
 }
 
 .plan .recommended {
- background-color: #f45c57;
+    background-color: #f45c57;
 }
 
 /* search domain */
@@ -256,7 +257,8 @@ nav {
 
 .searchdomain-container input[type="submit"] {
     background-color: #2cc76a;
-     padding: 15px 30px; /*muito utilizado para botões */
+    padding: 15px 30px;
+    /*muito utilizado para botões */
     font-size: 24px;
     color: #fff;
     cursor: pointer;
@@ -275,9 +277,159 @@ nav {
 }
 
 .contact-container h2 {
-    margin-top:25px;
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
-.contact-container h2, p {
-    margin-bottom:25px;
+.contact-container p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 200px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 0 10px 20px;
+
+}
+
+.contact-container textarea {
+    display: block;
+    margin: 0 auto 20px;
+    width: 470px;
+    height: 150px;
+}
+
+.contact-container input[type=submit] {
+    padding: 15px 20px;
+    background-color: #2cc76a;
+    border-radius: 5px;
+    font-family: Helvetica;
+    box-sizing: border-box;
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #fff;
+    opacity: 0.7;
+    display: block;
+    margin: 0 auto;
+}
+
+.contact-container input[type=submit]:hover {
+    opacity: 1;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    margin: 20px 0 100px;
+    font-weight: bold;
+}
+
+/* responsividade */
+
+/* small laptops a partir de 1100px */
+
+@media (max-width: 1100px) {
+    .plans-container {
+        width: 95%;
+    }
+
+    .plan {
+        margin: 0 5px;
+    }
+}
+
+/* tablet 900px */
+
+@media (max-width: 900px) {
+    .main-banner p {
+        font-size: 32px;
+        padding: 0 6rem;
+    }
+
+    .searchdomain-container {
+        padding: 2rem;
+    }
+}
+
+/* celular 576px */
+@media (max-width: 576px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    .navbar-items li {
+        display: inline-block;
+        text-transform: uppercase;
+        margin-left: 12px;
+        font-size: 12px;
+    }
+
+    .service-container ul {
+        flex-direction: column;
+        /*itens exibidos em colunas no elemento pai - ul */
+    }
+
+    .main-banner p {
+        font-size: 32px;
+        padding: 0 2rem;
+    }
+
+    .plans-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .plans-container ul {
+        padding: 0 2rem;
+        margin-bottom: 25px;
+    }
+
+
+    .plan {
+        width: 100%;
+        max-width: 100%;
+        /* embora pareça redundante, essa propriedade não permite que o elemento filho ultrapasse 100% do elemento pai */
+    }
+
+    .searchdomain-container h2 {
+        font-size: 21px;
+    }
+
+    .searchdomain-container p {
+        font-size: 15px;
+    }
+
+    .searchdomain-container input[type="text"] {
+        width: 100%;
+        font-size: 27px;
+    }
+    /* .searchdomain-container input[type="submit"] {
+        width: 100%;  } */
+  
+
+    .contact-container {
+        padding: 3rem 2rem;
+    }
+
+    .contact-container h2 {
+        font-size: 21px;
+    }
+
+    .contact-container p {
+        font-size: 21px;
+    }
+    .contact-container input,
+    .contact-container textarea {
+        width: 100%;
+        /* antes estava em pixels e, por isso, extrapola a tela de celular */
+        margin: 10px 0;
+    }
 }
